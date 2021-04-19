@@ -2,15 +2,12 @@ from abc import ABC
 from typing import Dict, Any, Union
 
 import geopandas as gpd
-from geojson import Point
 
-import geocangrid as gcg
 import pandas as pd
 from geopandas import GeoDataFrame
 from pandas import DataFrame, Series
 import os
 import warnings
-import numpy as np
 
 
 class GeoDataSetInfoError(Exception):
@@ -332,3 +329,4 @@ class GeoDataSet(dict):
 
     def __contains__(self, item):
         return item in self._store
+
